@@ -5,10 +5,12 @@ $(document).ready(function(){
 
     var search = $('#search').val();
     searchReddit(search);
+    console.log(search);
 
   });
 
   function searchReddit(subreddit) {
+      $('.main').empty();
 
     $.get('http://www.reddit.com/r/' + subreddit + '.json').done(function(response) {
 
